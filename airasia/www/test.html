@@ -8,6 +8,63 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+
+        var checkboxes = ["3B" , "3C" , "4A", "4B", "4C", "8E" , "8F" , "9E" , "9F", "10E" , "10F"];
+        function keet(checkboxid){
+            if (document.getElementById(checkboxid).checked == false){
+                if (checkboxes.includes(checkboxid)){
+                    openModal();
+                    document.getElementById(checkboxid).checked = true;
+                }
+
+            }
+
+        }
+
+
+    </script>
+
+    <style>
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,23 +83,23 @@
                     <label for="1A">1A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="1B" />
+                    <input type="checkbox" id="1B" onchange="keet(this.id)"/>
                     <label for="1B">1B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="1C" />
+                    <input type="checkbox" id="1C" onchange="keet(this.id)"/>
                     <label for="1C">1C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" disabled id="1D" />
+                    <input type="checkbox" disabled id="1D" onchange="keet(this.id)"/>
                     <label for="1D">Occupied</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="1E" />
+                    <input type="checkbox" id="1E" onchange="keet(this.id)"/>
                     <label for="1E">1E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="1F" />
+                    <input type="checkbox" id="1F" onchange="keet(this.id)"/>
                     <label for="1F">1F</label>
                 </li>
             </ol>
@@ -50,27 +107,27 @@
         <li class="row row--2">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="2A" />
+                    <input type="checkbox" id="2A" onchange="keet(this.id)"/>
                     <label for="2A">2A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="2B" />
+                    <input type="checkbox" id="2B" onchange="keet(this.id)"/>
                     <label for="2B">2B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="2C" />
+                    <input type="checkbox" id="2C" onchange="keet(this.id)"/>
                     <label for="2C">2C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="2D" />
+                    <input type="checkbox" id="2D" onchange="keet(this.id)"/>
                     <label for="2D">2D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="2E" />
+                    <input type="checkbox" id="2E" onchange="keet(this.id)"/>
                     <label for="2E">2E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="2F" />
+                    <input type="checkbox" id="2F" onchange="keet(this.id)"/>
                     <label for="2F">2F</label>
                 </li>
             </ol>
@@ -78,27 +135,27 @@
         <li class="row row--3">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="3A" />
+                    <input type="checkbox" id="3A" onchange="keet(this.id)"/>
                     <label for="3A">3A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="3B" />
+                    <input type="checkbox" id="3B" checked onchange="keet(this.id)"/>
                     <label for="3B">3B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="3C" />
+                    <input type="checkbox" id="3C" checked onchange="keet(this.id)"/>
                     <label for="3C">3C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="3D" />
+                    <input type="checkbox" id="3D" onchange="keet(this.id)"/>
                     <label for="3D">3D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="3E" />
+                    <input type="checkbox" id="3E" onchange="keet(this.id)"/>
                     <label for="3E">3E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="3F" />
+                    <input type="checkbox" id="3F" onchange="keet(this.id)"/>
                     <label for="3F">3F</label>
                 </li>
             </ol>
@@ -106,27 +163,27 @@
         <li class="row row--4">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="4A" />
+                    <input type="checkbox" id="4A" checked onchange="keet(this.id)"/>
                     <label for="4A">4A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="4B" />
+                    <input type="checkbox" id="4B" checked onchange="keet(this.id)"/>
                     <label for="4B">4B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="4C" />
+                    <input type="checkbox" id="4C" checked onchange="keet(this.id)"/>
                     <label for="4C">4C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="4D" />
+                    <input type="checkbox" id="4D" onchange="keet(this.id)"/>
                     <label for="4D">4D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="4E" />
+                    <input type="checkbox" id="4E" onchange="keet(this.id)"/>
                     <label for="4E">4E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="4F" />
+                    <input type="checkbox" id="4F" onchange="keet(this.id)"/>
                     <label for="4F">4F</label>
                 </li>
             </ol>
@@ -134,27 +191,27 @@
         <li class="row row--5">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="5A" />
+                    <input type="checkbox" id="5A" onchange="keet(this.id)"/>
                     <label for="5A">5A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="5B" />
+                    <input type="checkbox" id="5B" onchange="keet(this.id)"/>
                     <label for="5B">5B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="5C" />
+                    <input type="checkbox" id="5C" onchange="keet(this.id)"/>
                     <label for="5C">5C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="5D" />
+                    <input type="checkbox" id="5D" onchange="keet(this.id)"/>
                     <label for="5D">5D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="5E" />
+                    <input type="checkbox" id="5E" onchange="keet(this.id)"/>
                     <label for="5E">5E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="5F" />
+                    <input type="checkbox" id="5F" onchange="keet(this.id)"/>
                     <label for="5F">5F</label>
                 </li>
             </ol>
@@ -162,27 +219,27 @@
         <li class="row row--6">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="6A" />
+                    <input type="checkbox" id="6A" onchange="keet(this.id)"/>
                     <label for="6A">6A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="6B" />
+                    <input type="checkbox" id="6B" onchange="keet(this.id)"/>
                     <label for="6B">6B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="6C" />
+                    <input type="checkbox" id="6C" onchange="keet(this.id)"/>
                     <label for="6C">6C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="6D" />
+                    <input type="checkbox" id="6D" onchange="keet(this.id)"/>
                     <label for="6D">6D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="6E" />
+                    <input type="checkbox" id="6E" onchange="keet(this.id)"/>
                     <label for="6E">6E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="6F" />
+                    <input type="checkbox" id="6F" onchange="keet(this.id)"/>
                     <label for="6F">6F</label>
                 </li>
             </ol>
@@ -190,27 +247,27 @@
         <li class="row row--7">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="7A" />
+                    <input type="checkbox" id="7A" onchange="keet(this.id)"/>
                     <label for="7A">7A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="7B" />
+                    <input type="checkbox" id="7B" onchange="keet(this.id)"/>
                     <label for="7B">7B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="7C" />
+                    <input type="checkbox" id="7C" onchange="keet(this.id)"/>
                     <label for="7C">7C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="7D" />
+                    <input type="checkbox" id="7D" onchange="keet(this.id)"/>
                     <label for="7D">7D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="7E" />
+                    <input type="checkbox" id="7E" onchange="keet(this.id)"/>
                     <label for="7E">7E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="7F" />
+                    <input type="checkbox" id="7F" onchange="keet(this.id)"/>
                     <label for="7F">7F</label>
                 </li>
             </ol>
@@ -218,27 +275,27 @@
         <li class="row row--8">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="8A" />
+                    <input type="checkbox" id="8A" onchange="keet(this.id)"/>
                     <label for="8A">8A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="8B" />
+                    <input type="checkbox" id="8B" onchange="keet(this.id)"/>
                     <label for="8B">8B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="8C" />
+                    <input type="checkbox" id="8C" onchange="keet(this.id)"/>
                     <label for="8C">8C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="8D" />
+                    <input type="checkbox" id="8D" onchange="keet(this.id)"/>
                     <label for="8D">8D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="8E" />
+                    <input type="checkbox" id="8E" checked onchange="keet(this.id)"/>
                     <label for="8E">8E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="8F" />
+                    <input type="checkbox" id="8F" checked onchange="keet(this.id)"/>
                     <label for="8F">8F</label>
                 </li>
             </ol>
@@ -246,27 +303,27 @@
         <li class="row row--9">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="9A" />
+                    <input type="checkbox" id="9A" onchange="keet(this.id)"/>
                     <label for="9A">9A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="9B" />
+                    <input type="checkbox" id="9B" onchange="keet(this.id)"/>
                     <label for="9B">9B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="9C" />
+                    <input type="checkbox" id="9C" onchange="keet(this.id)"/>
                     <label for="9C">9C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="9D" />
+                    <input type="checkbox" id="9D" onchange="keet(this.id)"/>
                     <label for="9D">9D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="9E" />
+                    <input type="checkbox" id="9E" checked onchange="keet(this.id)"/>
                     <label for="9E">9E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="9F" />
+                    <input type="checkbox" id="9F" checked onchange="keet(this.id)"/>
                     <label for="9F">9F</label>
                 </li>
             </ol>
@@ -274,27 +331,27 @@
         <li class="row row--10">
             <ol class="seats" type="A">
                 <li class="seat">
-                    <input type="checkbox" id="10A" />
+                    <input type="checkbox" id="10A" onchange="keet(this.id)"/>
                     <label for="10A">10A</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="10B" />
+                    <input type="checkbox" id="10B" onchange="keet(this.id)"/>
                     <label for="10B">10B</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="10C" />
+                    <input type="checkbox" id="10C" onchange="keet(this.id)"/>
                     <label for="10C">10C</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="10D" />
+                    <input type="checkbox" id="10D" onchange="keet(this.id)"/>
                     <label for="10D">10D</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="10E" />
+                    <input type="checkbox" id="10E" checked onchange="keet(this.id)"/>
                     <label for="10E">10E</label>
                 </li>
                 <li class="seat">
-                    <input type="checkbox" id="10F" />
+                    <input type="checkbox" id="10F" checked onchange="keet(this.id)"/>
                     <label for="10F">10F</label>
                 </li>
             </ol>
@@ -304,6 +361,53 @@
 
     </div>
 </div>
+<div style="height: 90px;
+  line-height: 90px;
+  text-align: center;
+  ">
+<button>Pick My Best Seat</button>
+<button>Proceed with Booking</button>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Age: 27 <br>
+            Interest Area: Football <br></p>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    function openModal() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </html>
